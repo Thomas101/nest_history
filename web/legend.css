@@ -1,0 +1,18 @@
+.legend {
+	margin: 10px 0px 5px 0px;
+}
+.legend > * {
+	display: inline-block;
+	margin: 0px 10px 0px 25px;
+	position: relative;
+	min-height: 20px;
+	vertical-align: middle;
+}
+.legend > * >.palette {
+	content: '';
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left:-25px;
+	border: 1px solid #ccc;
+}

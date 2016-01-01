@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Nest History</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="legend.css">
+		<link rel="stylesheet" href="index.css">
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+		<script type="text/javascript" src="constants.js"></script>
+		<script type="text/javascript" src="chart.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<div class="container" id="main-container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Nest History</h1>
+					<div>
+			  		<ul id="main-tabs" class="nav nav-tabs" role="tablist">
+			    		<li role="presentation" class="active"><a href="#overview" role="tab" data-toggle="tab">Overview</a></li>
+			    		<li role="presentation"><a href="#day" role="tab" data-toggle="tab">Day View</a></li>
+			  		</ul>
+
+			  		<div class="tab-content">
+			    		<div role="tabpanel" class="tab-pane active" id="overview">
+			    			<div id="overview-chart"></div>
+			    		</div>
+			    		<div role="tabpanel" class="tab-pane" id="day">
+			    			<div id="day-charts"></div>
+			    		</div>
+			  		</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
