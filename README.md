@@ -2,7 +2,11 @@
 A scratch your own itch nest thermostat history logger. Logs current temperature and thermostat every 5 minutes then gives you a web UI to view it. Uses weather underground to log outside temperature and chartjs.org for graphing. I've got this running on a raspberry pi at home on my local network
 
 ## Preview
-See capture1 and capture 2
+#### Overview
+![Capture 1](https://raw.githubusercontent.com/Thomas101/nest_history/master/capture1.png "Capture 1")
+
+#### Day View
+![Capture 2](https://raw.githubusercontent.com/Thomas101/nest_history/master/capture2.png "Capture 2")
 
 ## Setup
 Create the following two files...
