@@ -44,7 +44,7 @@ $(document).ready(function() {
 	/********************************************/
 	// Startup
 	/********************************************/
-	$.get('/api/history.json', function(res) {
+	$.get('/api/history.json?_=' + new Date().getTime(), function(res) {
 		nestData = res.data
 		populateGraphs()
 	})
