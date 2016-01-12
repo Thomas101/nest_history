@@ -29,3 +29,8 @@ if (args.indexOf('record') !== -1) {
 	server.start()
 	console.log(colors.green('Serving on port ' + server.express.address().port))
 }
+
+
+process.on('uncaughtException', function (err) {
+  console.log('Caught exception: ' + err);
+});
