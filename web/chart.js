@@ -202,10 +202,11 @@
 		var bucketNameToDate = function(name) {
 			var components = name.split('_')
 			var date = new Date(0)
-			date.setYear(parseInt(components[0]))
-			date.setMonth(parseInt(components[1]))
-			date.setDate(parseInt(components[2]))
-			return date
+			return new Date(parseInt(components[0]), parseInt(components[1]), parseInt(components[2])) 
+			//date.setYear(parseInt(components[0]))
+			//date.setMonth(parseInt(components[1]))
+			//date.setDate(parseInt(components[2]))
+			//return date
 		}
 
 		/**
