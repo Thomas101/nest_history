@@ -1,4 +1,9 @@
 # Nest History
+
+[![Travis Build Status](https://img.shields.io/travis/Thomas101/nest_history.svg)](http://travis-ci.org/Thomas101/react-native-fence-html)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![npm](https://img.shields.io/badge/license-BSD--2--Clause-blue.svg)](https://github.com/Thomas101/nest_history/blob/master/LICENSEl)
+
 A scratch your own itch nest thermostat history logger. Logs current temperature and humidity every 5 minutes then gives you a web UI to view it. Uses weather underground to log outside temperature and chartjs.org for graphing. I've got this running on a raspberry pi at home on my local network
 
 ## Preview
