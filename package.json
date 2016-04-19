@@ -1,18 +1,24 @@
 {
   "name": "nest_history",
   "version": "1.0.1",
-  "description": "",
+  "description": "Nest thermostat logger for grabbing the temperature and humidity then showing the history on a webserver",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "author": "Thomas Beverley",
   "license": "BSD-2-Clause",
-  "repository" : "https://github.com/Thomas101/nest_history",
+  "repository": "https://github.com/Thomas101/nest_history",
   "dependencies": {
     "colors": "^1.1.2",
-    "express": "^4.13.3",
+    "express": "^4.13.4",
     "unofficial-nest-api": "^0.1.4",
     "wundergroundnode": "^0.9.0"
+  },
+  "standard": {
+    "globals": [ "$" ]
+  },
+  "devDependencies": {
+    "standard": "^6.0.8"
   }
 }
