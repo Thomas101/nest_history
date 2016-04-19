@@ -200,7 +200,7 @@
     */
     var bucketNameToDate = function (name) {
       var components = name.split('_')
-			return new Date(parseInt(components[0]), parseInt(components[1]), parseInt(components[2]))
+      return new Date(parseInt(components[0]), parseInt(components[1]), parseInt(components[2]))
     }
 
     /**
