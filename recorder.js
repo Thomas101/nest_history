@@ -31,8 +31,7 @@ class Recorder {
       const wunderground = new Wunderground(CONST.WUNDERGROUND_KEY)
 
       const parts = postalCode.match(/^([A-Z]{1,2}\d{1,2}[A-Z]?)\s*(\d[A-Z]{2})$/)
-      parts.shift()
-      const formattedPostalCode = parts.join(' ')
+      const formattedPostalCode = parts ? parts.shift().join(' ') : postalCode
 
       wunderground.conditions().request(formattedPostalCode, function (err, data) {
         if (err) {
@@ -104,6 +103,7 @@ class Recorder {
         })
         postalCodes = Array.from(new Set(postalCodes))
         return this._fetchMultipleWeatherStatus(postalCodes).then((weatherData) => {
+          console.log(weatherData)
           const now = new Date()
           const record = this._createDatabaseRecord(now.getTime() - startTime.getTime(), nestData, weatherData)
           return db.append(now, record)
