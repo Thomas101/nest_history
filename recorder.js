@@ -103,7 +103,6 @@ class Recorder {
         })
         postalCodes = Array.from(new Set(postalCodes))
         return this._fetchMultipleWeatherStatus(postalCodes).then((weatherData) => {
-          console.log(weatherData)
           const now = new Date()
           const record = this._createDatabaseRecord(now.getTime() - startTime.getTime(), nestData, weatherData)
           return db.append(now, record)
