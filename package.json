@@ -1,6 +1,6 @@
 {
   "name": "nest_history",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Nest thermostat logger for grabbing the temperature and humidity then showing the history on a webserver",
   "main": "index.js",
   "scripts": {
