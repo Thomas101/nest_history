@@ -12,11 +12,14 @@
   "dependencies": {
     "colors": "^1.1.2",
     "express": "^4.13.4",
+    "fs-extra": "^0.30.0",
     "unofficial-nest-api": "^0.1.4",
     "wundergroundnode": "^0.9.0"
   },
   "standard": {
-    "globals": [ "$" ]
+    "globals": [
+      "$"
+    ]
   },
   "devDependencies": {
     "standard": "^6.0.8"

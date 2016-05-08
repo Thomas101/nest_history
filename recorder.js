@@ -31,7 +31,7 @@ class Recorder {
       const wunderground = new Wunderground(CONST.WUNDERGROUND_KEY)
 
       const parts = postalCode.match(/^([A-Z]{1,2}\d{1,2}[A-Z]?)\s*(\d[A-Z]{2})$/)
-      const formattedPostalCode = parts ? parts.shift().join(' ') : postalCode
+      const formattedPostalCode = parts ? parts.slice(1).join(' ') : postalCode
 
       wunderground.conditions().request(formattedPostalCode, function (err, data) {
         if (err) {

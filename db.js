@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-const fs = require('fs')
+const fs = require('fs-extra')
 const CONST = require('./constants')
 
 const MS_DAY = 1000 * 60 * 60 * 24
@@ -49,7 +49,7 @@ class DB {
   append (date, rec) {
     return new Promise((resolve, reject) => {
       const uri = this.bucketPath(date)
-      fs.mkdir(path.dirname(uri), (_err) => {
+      fs.ensureDir(path.dirname(uri), (_err) => {
         fs.stat(uri, (err, stat) => {
           const writeFn = err ? fs.writeFile : fs.appendFile
           const prefix = err ? '' : '\n'

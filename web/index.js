@@ -15,9 +15,42 @@ $(document).ready(function () {
   /* *******************************************/
   // Datasource
   /* *******************************************/
+  var getDeviceId = function () {
+    if (window.CONSTANTS.DEVICE_ID) {
+      return window.CONSTANTS.DEVICE_ID
+    } else {
+      if (nestData) {
+        var allDevices = Object.keys(nestData)
+          .map((key) => nestData[key])
+          .map((data) => {
+            if (data) {
+              return data.map((rec) => Object.keys(rec.devices))
+            } else {
+              return null
+            }
+          })
+          .filter((devices) => devices !== null)
+          .reduce((acc, devices) => acc.concat(devices))
+
+        var devices = Object.keys(allDevices.reduce((acc, deviceId) => {
+          acc[deviceId] = true
+          return acc
+        }, {}))
+        if (devices.length === 1) {
+          return devices[0]
+        } else {
+          return undefined
+        }
+      } else {
+        return undefined
+      }
+    }
+  }
+
   var populateGraphs = function () {
     if (!nestData) { return }
-    var deviceId = window.CONSTANTS.DEVICE_ID
+    var deviceId = getDeviceId()
+    if (!deviceId) { return }
 
     if (elems.tabsContent.overview.hasClass('active')) {
       elems.overviewChart.empty()
